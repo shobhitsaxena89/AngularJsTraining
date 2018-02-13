@@ -38,8 +38,9 @@ myApp.controller('MyController',['$scope', function($scope){
 myApp.controller('MyController', ['$scope', 'AppService', 
 function(abc, AppService){
     AppService.getStudents()
-        .then(function(result){
-            abc.getStudents = result.data;
+        .then(function(result){   
+            //abc.getStudents = result.data;             
+            abc.getStudents = result;
         });
 
         abc.onViewBtnClick = function(student){
