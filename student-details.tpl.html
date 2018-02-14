@@ -1,0 +1,13 @@
+<!-- <div>
+    <h3>{{vm.myTitle}}</h3>
+    {{vm.myList}}
+    This is student Details page 
+    <!-- {{$ctrl.myname}} this is used when we don't have ControllerAs in custom component -->
+    <!-- {{vm.myname}}
+</div>   -->
+
+<div ng-show="vm.currentStudent">
+    <h2>{{vm.myTitle}}</h2>
+    <p>Name: {{vm.currentStudent.name}}</p>
+    <p>Age: {{vm.currentStudent.age}}</p>
+</div>

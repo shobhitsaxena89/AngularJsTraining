@@ -7,18 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    <student-details my-title="Hello"></student-details>
+    <student-details my-title="Hi"></student-details>
+
     <div ng-controller="MyController">
-       
-        {{myval}}
-        <input type="text" ng-model="myval">
+               
+        <!-- <input type="text" ng-model="myval">
         <button ng-click="onClick('someValue')">Click me</button>
         <div ng-if="myval.length === 0">
             myval is empty 1
         </div>
         <div ng-hide="myval.length === 0">
             myval is empty 2
-        </div>
+        </div> -->
 
+        <student-details myList="students" my-title="{{name}}"></student-details>
+        <div>{{name | lowercase}}</div>
+        <div>{{name | lowercase}}</div>
+        <div>{{name}}</div>
+        <div>{{mydate | date}}</div>
+        <div>{{100 | currency: 'INR'}}</div>
         <table>
             <thead>
                 <tr>
@@ -45,12 +53,15 @@
                 </tr>
             </tbody>
         </table>
-        <div ng-show="selectedStudent">
+
+        <student-details current-student="selectedStudent" 
+        my-title="Student Details"></student-details>
+        <!-- <div ng-show="selectedStudent">
             <h2>Student Details</h2>
             <p>Name: {{selectedStudent.name}}</p>
             <p>Age: {{selectedStudent.age}}</p>
             <p>Seniority: {{selectedStudent.seniority}}</p>
-        </div>
+        </div> -->
     </div>
 <!-- 
     <div style="border: 1px soli #000d" ng-controller="MyController">
