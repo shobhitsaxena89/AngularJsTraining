@@ -1,4 +1,21 @@
-var myApp = angular.module('myApp', []); // for creating/ins a module
+var myApp = angular.module('myApp', ['ui.router']); // for creating/instantiate a module
+myApp.config(['$stateProvider','$urlRouterProvider',
+function($stateProvider, $urlRouterProvider){
+    $stateProvider.state({
+    name: 'home',
+    url: '/home',
+    //template: '<div>This is the home page</div>'
+    component: 'home'
+    });
+    $stateProvider.state({
+        name: 'about',
+        url: '/about',
+        //template: '<div>This is the about page</div>'     
+        component: 'about'   
+    });
+    //$urlRouterProvider.otherwise('/home');
+}]);
+
 myApp.controller('MyController',['$scope', function($scope){
     $scope.myval= "Hello";
     $scope.onClick = function()

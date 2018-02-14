@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <ui-view></ui-view>
     <student-details my-title="Hello"></student-details>
     <student-details my-title="Hi"></student-details>
 
@@ -20,7 +21,8 @@
         <div ng-hide="myval.length === 0">
             myval is empty 2
         </div> -->
-
+        <a ui-sref="home" ui-sref-active="active">Home</a>
+        <a ui-sref="about" ui-sref-active="active">About</a>
         <student-details myList="students" my-title="{{name}}"></student-details>
         <div>{{name | lowercase}}</div>
         <div>{{name | lowercase}}</div>
@@ -68,9 +70,10 @@
 {{myval}}
     </div> -->
     <script src="angular.js"></script>
+    <script src="angular-ui-router.js"></script>
     <script src="app.js"></script>
     <script src="app.service.js"></script>
     <script src="app.filter.js"></script>
-    <script src="app.component.js"></script>
+    <script src="app.component.js"></script>    
 </body>
 </html>
